@@ -20,8 +20,10 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
+        working-directory: ./energy-cypress-tests
         run: npm install
 
       - name: Run Cypress tests
+        working-directory: ./energy-cypress-tests
         run: npx cypress run --browser chrome --headless
 
