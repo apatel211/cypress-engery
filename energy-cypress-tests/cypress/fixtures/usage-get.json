@@ -2,10 +2,10 @@
   "valid": {
     "records": [
       {
-        "nmi": "NEM1201010",
-        "timestamp": "2005-03-01T08:00:00.000Z",
-        "unit": "kWh",
-        "consumption": 1.059
+        "nmi": "NT87654435",
+        "consumption": "10",
+        "timestamp": "2025-08-14T18:17:59.948Z",
+        "unit": "kWh"
       }
     ]
   },
