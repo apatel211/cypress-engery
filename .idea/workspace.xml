@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/login.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/login.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/testData.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/test-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/usage-get.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/usage-get.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/usage-post.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/usage-post.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/utils/dataGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/utils/dataGenerator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +75,7 @@
       <recent name="$PROJECT_DIR$/cypress" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cy:run">
+  <component name="RunManager" selected="npm.coverage: test (1)">
     <configuration name="coverage: test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
@@ -120,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.cy:run" />
         <item itemvalue="npm.coverage: test (1)" />
+        <item itemvalue="npm.cy:run" />
         <item itemvalue="npm.coverage: test" />
         <item itemvalue="npm.coverage:report" />
         <item itemvalue="npm.cypress:run (1)" />
@@ -153,7 +161,7 @@
       <workItem from="1755202249836" duration="297000" />
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
-      <workItem from="1755361785311" duration="9701000" />
+      <workItem from="1755361785311" duration="11381000" />
     </task>
     <servers />
   </component>

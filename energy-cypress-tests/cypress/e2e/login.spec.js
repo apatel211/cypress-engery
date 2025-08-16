@@ -10,9 +10,9 @@ describe('Authentication', () => {
     });
 
     it('happy path: logs in with valid credentials', () => {
-        cy.fixture('testData.json').then((testdata) => {
-            loginPage.username().type(testdata.validCredentials.username);
-            loginPage.password().type(testdata.validCredentials.password);
+        cy.fixture('test-data.json').then((data) => {
+            loginPage.username().type(data.validCredentials.username);
+            loginPage.password().type(data.validCredentials.password);
             loginPage.submit().click();
 
             // assert redirect to home
@@ -24,9 +24,9 @@ describe('Authentication', () => {
     });
 
     it('invalid credentials show error', () => {
-        cy.fixture('testData.json').then((testdata) => {
-            loginPage.username().type(testdata.invalidCredentials.username);
-            loginPage.password().type(testdata.invalidCredentials.password);
+        cy.fixture('test-data.json').then((data) => {
+            loginPage.username().type(data.invalidCredentials.username);
+            loginPage.password().type(data.invalidCredentials.password);
             loginPage.submit().click();
 
             cy.contains('div', 'Something went wrong!').should('be.visible');

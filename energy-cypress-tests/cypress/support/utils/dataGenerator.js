@@ -1,4 +1,4 @@
-import testData from '../../fixtures/testData.json';
+import testData from '../../fixtures/test-data.json';
 
 export function getRandomNmiSuffix() {
     return Math.floor(Math.random() * (999999999 - 10000000) + 10000000).toString();

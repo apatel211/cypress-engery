@@ -1,4 +1,4 @@
-Cypress.Commands.add("login", (fixture='testData.json', type='validCredentials') => {
+Cypress.Commands.add("login", (fixture='test-data.json', type='validCredentials') => {
     cy.fixture(fixture).then((data) => {
 
         // const credentials = data[type]; // get nested object

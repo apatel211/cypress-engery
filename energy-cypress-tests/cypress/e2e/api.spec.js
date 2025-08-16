@@ -5,7 +5,6 @@ describe('api page', () => {
         cy.clearLocalStorage();
     });
 
-
     it('Create Usage Data - Success', () => {
         cy.login();
         cy.fixture('usage-post.json').then((data) => {
@@ -23,16 +22,21 @@ describe('api page', () => {
         cy.fixture('usage-get.json').as('expectedUsage'); // load expected data
         cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
             cy.get('@expectedUsage').then((usageData) => {
-                // Assertions in test
                 expect(response.status).to.equal(200);
                 expect(response.body.records, 'records array').to.be.an('array').that.is.not.empty;
-                expect(response.body.records, 'records include fixture data').to.deep.include.members(usageData.records);
-
+                usageData.valid.records.forEach((expectedRecord) => {
+                    const match = response.body.records.find((r) =>
+                        r.nmi === expectedRecord.nmi &&
+                        r.timestamp === expectedRecord.timestamp &&
+                        Number(r.consumption) === Number(expectedRecord.consumption) &&
+                        r.unit === expectedRecord.unit
+                    );
+                    expect(match, `Record not found: ${expectedRecord.nmi}`).to.exist;
+                });
                 cy.log('GET UsageData response: ' + JSON.stringify(response.body));
             });
         });
     });
-
 
     it('Create Usage Data - Failure', () => {
         cy.login();
@@ -47,7 +51,7 @@ describe('api page', () => {
     });
 
     it('Login API - Success', () => {
-        cy.fixture('testdata.json').then((data) => {
+        cy.fixture('test-data.json').then((data) => {
             cy.POSTLogin(Cypress.config().baseUrl, data.validCredentials)
                 .then((response) => {
                     expect(response.status).to.equal(200);
@@ -60,7 +64,7 @@ describe('api page', () => {
     });
 
     it('Login API - Failure', () => {
-        cy.fixture('testdata.json').then((data) => {
+        cy.fixture('test-data.json').then((data) => {
             cy.POSTLogin(Cypress.config().baseUrl, data.invalidCredentials)
                 .then((response) => {
                     expect(response.status).to.equal(401);
