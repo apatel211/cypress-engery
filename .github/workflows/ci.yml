@@ -23,6 +23,10 @@ jobs:
         working-directory: ./energy-cypress-tests
         run: npm install
 
+      - name: Install Cypress binary
+        working-directory: ./energy-cypress-tests
+        run: npx cypress install
+
       - name: Run Cypress tests
         working-directory: ./energy-cypress-tests
         run: npx cypress run --browser chrome --headless
