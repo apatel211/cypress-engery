@@ -19,6 +19,21 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install app dependencies
+        working-directory: ./flo-qa-assignment
+        run: npm install
+
+      - name: Build app
+        working-directory: ./flo-qa-assignment
+        run: npm run build
+
+      - name: Start app
+        working-directory: ./flo-qa-assignment
+        run: npm start &
+
+      - name: Wait for server
+        run: npx wait-on http://localhost:3000
+
       - name: Install dependencies
         working-directory: ./energy-cypress-tests
         run: npm install

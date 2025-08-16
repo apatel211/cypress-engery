@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,7 @@
     "npm.coverage: test (1).executor": "Run",
     "npm.coverage: test.executor": "Run",
     "npm.coverage:report.executor": "Run",
+    "npm.cy:run.executor": "Run",
     "npm.cypress:open (1).executor": "Run",
     "npm.cypress:open.executor": "Run",
     "npm.cypress:run (1).executor": "Run",
@@ -66,7 +70,7 @@
       <recent name="$PROJECT_DIR$/cypress" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.coverage: test (1)">
+  <component name="RunManager" selected="npm.cy:run">
     <configuration name="coverage: test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
@@ -97,11 +101,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="cypress:open (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="cy:run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cypress:open" />
+        <script value="cy:run" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -119,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.cy:run" />
         <item itemvalue="npm.coverage: test (1)" />
         <item itemvalue="npm.coverage: test" />
         <item itemvalue="npm.coverage:report" />
         <item itemvalue="npm.cypress:run (1)" />
-        <item itemvalue="npm.cypress:open (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +156,7 @@
       <workItem from="1755202249836" duration="297000" />
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
-      <workItem from="1755361785311" duration="8659000" />
+      <workItem from="1755361785311" duration="9427000" />
     </task>
     <servers />
   </component>
