@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="319qng1TIv2QiJm8T6mofGLfkid" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cypress.all tests in login.spec.js.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/ankitapatel/Desktop/document/assignments-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.coverage: test.executor": "Run",
+    "npm.coverage:report.executor": "Run",
+    "npm.cypress:open (1).executor": "Run",
+    "npm.cypress:open.executor": "Run",
+    "npm.cypress:run (1).executor": "Run",
+    "npm.cypress:run.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/ankitapatel/Desktop/assignments-main/flo-qa-assignment/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cypress" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.coverage: test">
+    <configuration name="coverage: test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests copy/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="coverage: test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="coverage:report" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests copy/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="coverage:report" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="cypress:open (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cypress:open" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="cypress:open" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/cypress/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cypress:open" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="cypress:run (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cypress:run" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.coverage: test" />
+        <item itemvalue="npm.coverage:report" />
+        <item itemvalue="npm.cypress:run (1)" />
+        <item itemvalue="npm.cypress:open (1)" />
+        <item itemvalue="npm.cypress:open" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-WS-252.23892.411" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="" />
+      <created>1754946804408</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754946804408</updated>
+      <workItem from="1754959680402" duration="119000" />
+      <workItem from="1754959801295" duration="72000" />
+      <workItem from="1754959875568" duration="133000" />
+      <workItem from="1754960010917" duration="56000" />
+      <workItem from="1754960068699" duration="229000" />
+      <workItem from="1754960311435" duration="38000" />
+      <workItem from="1754960359462" duration="2080000" />
+      <workItem from="1755200828997" duration="1417000" />
+      <workItem from="1755202249836" duration="297000" />
+      <workItem from="1755202555835" duration="23000" />
+      <workItem from="1755202581596" duration="211000" />
+      <workItem from="1755361785311" duration="496000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

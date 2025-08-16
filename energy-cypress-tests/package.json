@@ -1,0 +1,33 @@
+{
+  "name": "energy-cypress-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=true",
+    "coverage:report": "nyc report --reporter=lcov",
+    "coverage: test": "npm run cypress:run && npm run coverage:report"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.11.0",
+    "cypress": "^12.9.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.0",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "include": [
+      ".next/**/*.js"
+    ],
+    "exclude": [
+      "**/*.test.js",
+      "cypress/**"
+    ],
+    "reporter": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "all": true
+  }
+}

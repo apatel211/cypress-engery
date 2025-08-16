@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-15T21:38:29.016Z",
+    "end": "2025-08-15T21:38:32.029Z",
+    "duration": 3013,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "29f9a3d6-f94e-4b21-bec9-ee4a2c75e053",
+      "title": "",
+      "fullFile": "cypress/e2e/api.spec.js",
+      "file": "cypress/e2e/api.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52111ecb-658f-4802-9359-b1f4045277e5",
+          "title": "api page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create Usage Data - Success",
+              "fullTitle": "api page Create Usage Data - Success",
+              "timedOut": null,
+              "duration": 1002,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.POSTUsageData(Cypress.config().baseUrl).then(response => {\n  // Status code check\n  expect(response.status, 'status code').to.equal(200);\n  // Response structure check\n  expect(response.body, 'response body').to.have.property('message', 'Energy usage saved successfully!');\n});",
+              "err": {},
+              "uuid": "2a53d19f-02f3-471e-9aa8-3b638f171404",
+              "parentUUID": "52111ecb-658f-4802-9359-b1f4045277e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET: Fetch all usage records and assert",
+              "fullTitle": "api page GET: Fetch all usage records and assert",
+              "timedOut": null,
+              "duration": 831,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.fixture('usage-get.json').as('expectedUsage'); // load expected data\ncy.GETUsageData(Cypress.config().baseUrl).then(response => {\n  cy.get('@expectedUsage').then(usageData => {\n    // Assertions in test\n    expect(response.status).to.equal(200);\n    expect(response.body.records, 'records array').to.be.an('array').that.is.not.empty;\n    expect(response.body.records, 'records include fixture data').to.deep.include.members(usageData.records);\n    cy.log('GET UsageData response: ' + JSON.stringify(response.body));\n  });\n});",
+              "err": {},
+              "uuid": "43059620-df9a-402d-8c1f-4c6f866fa2d8",
+              "parentUUID": "52111ecb-658f-4802-9359-b1f4045277e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create Usage Data - Failure",
+              "fullTitle": "api page Create Usage Data - Failure",
+              "timedOut": null,
+              "duration": 776,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.fixture('usage-post.json').then(data => {\n  // Create invalid request (missing required field)\n  const invalidData = _objectSpread(_objectSpread({}, data), {}, {\n    nmi: ''\n  });\n  cy.request({\n    method: \"POST\",\n    url: `${Cypress.config().baseUrl}/api/usage`,\n    failOnStatusCode: false,\n    headers: {\n      'Content-Type': 'application/json;charset=UTF-8'\n    },\n    body: invalidData\n  }).then(response => {\n    expect(response.status, 'status code').to.equal(400); // or your expected error code\n    expect(response.body, 'error message').to.have.property('message', 'Invalid data format');\n  });\n});",
+              "err": {},
+              "uuid": "054566b1-f0d8-4b5e-b4ce-ae6b5c0944e4",
+              "parentUUID": "52111ecb-658f-4802-9359-b1f4045277e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login API - Success",
+              "fullTitle": "api page Login API - Success",
+              "timedOut": null,
+              "duration": 19,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testdata.json').then(data => {\n  cy.POSTLogin(Cypress.config().baseUrl, data.validCredentials).then(response => {\n    expect(response.status).to.equal(200);\n    expect(response.body).to.deep.equal({\n      message: \"Login successful\",\n      token: \"mock-jwt-token-12345\"\n    });\n  });\n});",
+              "err": {},
+              "uuid": "ac198ef4-6647-4335-82f8-3913ae412147",
+              "parentUUID": "52111ecb-658f-4802-9359-b1f4045277e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login API - Failure",
+              "fullTitle": "api page Login API - Failure",
+              "timedOut": null,
+              "duration": 16,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testdata.json').then(data => {\n  cy.POSTLogin(Cypress.config().baseUrl, data.invalidCredentials).then(response => {\n    expect(response.status).to.equal(401);\n    expect(response.body).to.have.property('message', 'Invalid credentials');\n  });\n});",
+              "err": {},
+              "uuid": "5e86e17c-6ddb-401e-bc7b-fb4adff1d61d",
+              "parentUUID": "52111ecb-658f-4802-9359-b1f4045277e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2a53d19f-02f3-471e-9aa8-3b638f171404",
+            "43059620-df9a-402d-8c1f-4c6f866fa2d8",
+            "054566b1-f0d8-4b5e-b4ce-ae6b5c0944e4",
+            "ac198ef4-6647-4335-82f8-3913ae412147",
+            "5e86e17c-6ddb-401e-bc7b-fb4adff1d61d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2644,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

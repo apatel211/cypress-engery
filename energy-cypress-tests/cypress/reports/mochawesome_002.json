@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-15T21:38:37.022Z",
+    "end": "2025-08-15T21:38:38.897Z",
+    "duration": 1875,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "189ec98b-6d15-4341-8504-1b2deeaa90fe",
+      "title": "",
+      "fullFile": "cypress/e2e/login.spec.js",
+      "file": "cypress/e2e/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be540c4e-443a-4f74-b414-1e67375a7c89",
+          "title": "Authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "happy path: logs in with valid credentials",
+              "fullTitle": "Authentication happy path: logs in with valid credentials",
+              "timedOut": null,
+              "duration": 875,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData.json').then(testdata => {\n  _login.loginPage.username().type(testdata.validCredentials.username);\n  _login.loginPage.password().type(testdata.validCredentials.password);\n  _login.loginPage.submit().click();\n  // assert redirect to home\n  cy.url({\n    timeout: 30000\n  }).should('include', '/home');\n  cy.get('h2.chakra-heading', {\n    timeout: 10000\n  }).should('be.visible').and('contain', 'Welcome to your assignment!');\n});",
+              "err": {},
+              "uuid": "2e27df8d-19b5-46db-a758-b1a726b443fc",
+              "parentUUID": "be540c4e-443a-4f74-b414-1e67375a7c89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "invalid credentials show error",
+              "fullTitle": "Authentication invalid credentials show error",
+              "timedOut": null,
+              "duration": 691,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('testData.json').then(testdata => {\n  _login.loginPage.username().type(testdata.invalidCredentials.username);\n  _login.loginPage.password().type(testdata.invalidCredentials.password);\n  _login.loginPage.submit().click();\n  cy.contains('div', 'Something went wrong!').should('be.visible');\n});",
+              "err": {},
+              "uuid": "71169981-fd68-430f-a42d-4a8b83660fc5",
+              "parentUUID": "be540c4e-443a-4f74-b414-1e67375a7c89",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e27df8d-19b5-46db-a758-b1a726b443fc",
+            "71169981-fd68-430f-a42d-4a8b83660fc5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

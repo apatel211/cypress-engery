@@ -1,0 +1,21 @@
+{
+  "validCredentials": {
+    "username": "testuser",
+    "password": "testuser2025"
+  },
+  "invalidCredentials": {
+    "username": "testuser1",
+    "password": "testuser2025"
+  },
+  "dropdownValues": [
+    "NEM",
+    "ACT",
+    "NSW",
+    "NT",
+    "QLD",
+    "SA",
+    "TAS",
+    "VIC",
+    "WA"
+  ]
+}
