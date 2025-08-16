@@ -6,7 +6,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=true",
     "coverage:report": "nyc report --reporter=lcov",
-    "coverage: test": "npm run cypress:run && npm run coverage:report"
+    "coverage: test": "npm run cypress:run && npm run coverage:report",
+    "merge:reports": "mochawesome-merge cypress/reports/*.json | marge --reportDir cypress/reports/final --inline"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.11.0",

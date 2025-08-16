@@ -1,10 +1,10 @@
-# Energy App - Cypress Test Framework (mock/stub + POM)
+# Energy App - Cypress Test Framework (mock+ POM)
 
 This folder contains a Cypress test framework scaffold tailored to the provided assignment.
 
 Features included:
 - Page Object Model (cypress/support/pages)
-- Fixtures for stubbing /api/nmi-data (cypress/fixtures/nmi-data.json)
+- Fixtures for mock /api/.. (cypress/fixtures/.json)
 - Custom Cypress commands for login and mocking (`cypress/support/commands.js`)
 - Tests for Authentication, Dashboard, and Enter Energy Usage flows (cypress/e2e)
 - Reporting support with mochawesome (script `cypress:run`)
@@ -27,4 +27,3 @@ What to add for CI:
 - Install Cypress, run `npm run cypress:run`
 - Collect mochawesome JSONs and merge them, then produce HTML reports
 - Optionally collect coverage reports with nyc/lcov and upload to Coveralls or Codecov.
-

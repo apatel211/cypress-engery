@@ -8,18 +8,19 @@ describe('api page', () => {
 
     it('Create Usage Data - Success', () => {
         cy.login();
-        cy.POSTUsageData(Cypress.config().baseUrl).then((response) => {
-            // Status code check
-            expect(response.status, 'status code').to.equal(200);
-            // Response structure check
-            expect(response.body, 'response body').to.have.property('message', 'Energy usage saved successfully!');
+        cy.fixture('usage-post.json').then((data) => {
+            cy.POSTUsageData(Cypress.config().baseUrl,data.usageDataValid).then((response) => {
+                // Status code check
+                expect(response.status, 'status code').to.equal(200);
+                // Response structure check
+                expect(response.body, 'response body').to.have.property('message', 'Energy usage saved successfully!');
+            });
         });
     });
 
-    it('GET: Fetch all usage records and assert', () => {
+    it('GET all usage records and assert', () => {
         cy.login();
         cy.fixture('usage-get.json').as('expectedUsage'); // load expected data
-
         cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
             cy.get('@expectedUsage').then((usageData) => {
                 // Assertions in test
@@ -36,21 +37,11 @@ describe('api page', () => {
     it('Create Usage Data - Failure', () => {
         cy.login();
         cy.fixture('usage-post.json').then((data) => {
-            // Create invalid request (missing required field)
-            const invalidData = { ...data, nmi: '' };
-
-            cy.request({
-                method: "POST",
-                url: `${Cypress.config().baseUrl}/api/usage`,
-                failOnStatusCode: false,
-                headers: {
-                    'Content-Type': 'application/json;charset=UTF-8'
-                },
-                body: invalidData
-            }).then((response) => {
-                expect(response.status, 'status code').to.equal(400); // or your expected error code
-                expect(response.body, 'error message')
-                    .to.have.property('message', 'Invalid data format');
+            cy.POSTUsageData(Cypress.config().baseUrl,data.usageDataInvalid).then((response) => {
+                // Status code check
+                expect(response.status, 'status code').to.equal(400);
+                // Response structure check
+                expect(response.body, 'response body').to.have.property('message', 'Invalid data format');
             });
         });
     });

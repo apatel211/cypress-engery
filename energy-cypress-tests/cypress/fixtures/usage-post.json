@@ -1,7 +1,13 @@
 {
-  "nmi": "NT87654435",
-  "consumption": "10",
-  "timestamp": "2025-08-14T18:17:59.948Z",
-  "unit": "kWh",
-  "id": "b47jm3a"
+  "usageDataValid": {
+    "nmi": "NT87654435",
+    "consumption": "10",
+    "timestamp": "2025-08-14T18:17:59.948Z",
+    "unit": "kWh",
+    "id": "b47jm3a"
+  },
+
+  "usageDataInvalid": {
+    "nmi": "NT8"
+  }
 }
