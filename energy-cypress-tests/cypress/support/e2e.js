@@ -1,5 +1,6 @@
 import './commands'
 import '@cypress/code-coverage/support'
+import '@shelex/cypress-allure-plugin';
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from

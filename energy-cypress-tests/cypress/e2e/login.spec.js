@@ -1,4 +1,4 @@
-import { loginPage } from '../support/pages/login.page'
+import {loginPage} from '../support/pages/login.page'
 
 describe('Authentication', () => {
 
@@ -16,8 +16,8 @@ describe('Authentication', () => {
             loginPage.submit().click();
 
             // assert redirect to home
-            cy.url({ timeout: 30000 }).should('include', '/home');
-            cy.get('h2.chakra-heading', { timeout: 10000 })
+            cy.url({timeout: 30000}).should('include', '/home');
+            cy.get('h2.chakra-heading', {timeout: 10000})
                 .should('be.visible')
                 .and('contain', 'Welcome to your assignment!');
         });

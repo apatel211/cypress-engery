@@ -1,10 +1,6 @@
-Cypress.Commands.add("login", (fixture='test-data.json', type='validCredentials') => {
+Cypress.Commands.add("login", (fixture = 'test-data.json', type = 'validCredentials') => {
     cy.fixture(fixture).then((data) => {
 
-        // const credentials = data[type]; // get nested object
-        // if (!credentials || !credentials.username || !credentials.password) {
-        //     throw new Error(`Invalid fixture data for ${type}`);
-        // }
         cy.visit('/login');
         // Type username
         cy.get('input[name="username"]').clear().type(data.validCredentials.username);
@@ -16,27 +12,27 @@ Cypress.Commands.add("login", (fixture='test-data.json', type='validCredentials'
 });
 
 
-Cypress.Commands.add('POSTUsageData', (baseURL,usageData) => {
-        cy.request({
-            method: "POST",
-            url: `${baseURL}/api/usage`,
-            failOnStatusCode: false,
-            headers: {
-                'Content-Type': 'application/json;charset=UTF-8'
-            },
-            body: usageData
+Cypress.Commands.add('POSTUsageData', (baseURL, usageData) => {
+    cy.request({
+        method: "POST",
+        url: `${baseURL}/api/usage`,
+        failOnStatusCode: false,
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+        },
+        body: usageData
     });
 });
 
 Cypress.Commands.add('GETUsageData', (baseURL) => {
-        // Make GET request to fetch usage data
-        return cy.request({
-            method: 'GET',
-            url: `${baseURL}/api/usage`,
-            failOnStatusCode: false,
-            headers: {
-                'Content-Type': 'application/json;charset=UTF-8'
-            }
+    // Make GET request to fetch usage data
+    return cy.request({
+        method: 'GET',
+        url: `${baseURL}/api/usage`,
+        failOnStatusCode: false,
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+        }
     });
 });
 

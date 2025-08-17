@@ -12,10 +12,7 @@
   "invalid": {
     "records": [
       {
-        "nmi": "NEM9999999",
-        "timestamp": "2025-01-01T00:00:00.000Z",
-        "unit": "kWh",
-        "consumption": 5
+        "nmi": "NT8"
       }
     ]
   }

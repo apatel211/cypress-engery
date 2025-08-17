@@ -1,11 +1,12 @@
-import { enterUsagePage } from '../support/pages/enterUsage.page'
-import { getRandomDropdownValue, getRandomNmiSuffix, getRandomUsage } from '../support/utils/dataGenerator';
+import {enterUsagePage} from '../support/pages/enterUsage.page'
+import {getRandomDropdownValue, getRandomNmiSuffix, getRandomUsage} from '../support/utils/dataGenerator';
 
-describe('Enter Energy Usage', () => {beforeEach(() => {
-    cy.clearCookies();
-    cy.clearLocalStorage();
-    cy.login();
-    enterUsagePage.visit();
+describe('Enter Energy Usage', () => {
+    beforeEach(() => {
+        cy.clearCookies();
+        cy.clearLocalStorage();
+        cy.login();
+        enterUsagePage.visit();
     })
 
     it('fills the multi-step form and saves a new record', () => {

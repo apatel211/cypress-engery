@@ -5,9 +5,12 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=true",
+    "merge:reports": "mochawesome-merge cypress/reports/*.json | marge --reportDir cypress/reports/final --inline",
     "coverage:report": "nyc report --reporter=lcov",
     "coverage: test": "npm run cypress:run && npm run coverage:report",
-    "merge:reports": "mochawesome-merge cypress/reports/*.json | marge --reportDir cypress/reports/final --inline"
+    "cypress:run:allure": "cypress run --env allure=true --browser chrome --headless",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.11.0",

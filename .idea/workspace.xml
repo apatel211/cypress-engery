@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/enter-usage.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/enter-usage.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/login.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/login.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/usage-get.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/fixtures/usage-get.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/e2e.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/e2e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/pages/enterUsage.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/pages/enterUsage.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/pages/login.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/pages/login.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +68,7 @@
     "npm.cypress:open.executor": "Run",
     "npm.cypress:run (1).executor": "Run",
     "npm.cypress:run.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "/Users/ankitapatel/Desktop/document/assignments-main/flo-qa-assignment/node_modules/typescript/lib",
@@ -153,7 +166,7 @@
       <workItem from="1755202249836" duration="297000" />
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
-      <workItem from="1755361785311" duration="11652000" />
+      <workItem from="1755361785311" duration="15145000" />
     </task>
     <servers />
   </component>

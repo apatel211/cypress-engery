@@ -1,4 +1,3 @@
-
 describe('api page', () => {
     beforeEach(() => {
         cy.clearCookies();
@@ -8,7 +7,7 @@ describe('api page', () => {
     it('Create Usage Data - Success', () => {
         cy.login();
         cy.fixture('usage-post.json').then((data) => {
-            cy.POSTUsageData(Cypress.config().baseUrl,data.usageDataValid).then((response) => {
+            cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataValid).then((response) => {
                 // Status code check
                 expect(response.status, 'status code').to.equal(200);
                 // Response structure check
@@ -38,10 +37,31 @@ describe('api page', () => {
         });
     });
 
+    it('GET all usage records and assert invalid records do not exist', () => {
+        cy.login();
+        cy.fixture('usage-get.json').as('expectedUsage');
+
+        cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
+            cy.get('@expectedUsage').then((usageData) => {
+                expect(response.status).to.equal(200);
+                usageData.invalid.records.forEach((invalidRecord) => {
+                    const match = response.body.records.find((r) =>
+                        r.nmi === invalidRecord.nmi &&
+                        r.timestamp === invalidRecord.timestamp &&
+                        Number(r.consumption) === Number(invalidRecord.consumption) &&
+                        r.unit === invalidRecord.unit
+                    );
+                    expect(match, `Invalid record should not exist: ${invalidRecord.nmi}`).to.not.exist;
+                });
+                cy.log('GET UsageData response: ' + JSON.stringify(response.body));
+            });
+        });
+    });
+
     it('Create Usage Data - Failure', () => {
         cy.login();
         cy.fixture('usage-post.json').then((data) => {
-            cy.POSTUsageData(Cypress.config().baseUrl,data.usageDataInvalid).then((response) => {
+            cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataInvalid).then((response) => {
                 // Status code check
                 expect(response.status, 'status code').to.equal(400);
                 // Response structure check

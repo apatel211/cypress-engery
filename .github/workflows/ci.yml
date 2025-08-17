@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-      branches: [ main ]
+    branches: [ main ]
 
 jobs:
   cypress:
@@ -42,7 +42,26 @@ jobs:
         working-directory: ./energy-cypress-tests
         run: npx cypress install
 
-      - name: Run Cypress tests
+      - name: Run Cypress with Allure
         working-directory: ./energy-cypress-tests
-        run: npx cypress run --browser chrome --headless
+        run: npm run cypress:run:allure
+
+      - name: Generate Allure Report
+        working-directory: ./energy-cypress-tests
+        run: npm run allure:generate
+
+      - name: Upload Allure Report Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: ./energy-cypress-tests/allure-report
+
+
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./energy-cypress-tests/allure-report
+          publish_branch: gh-pages
+
 
