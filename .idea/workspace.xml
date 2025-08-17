@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,7 @@
       <workItem from="1755202249836" duration="297000" />
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
-      <workItem from="1755361785311" duration="16264000" />
+      <workItem from="1755361785311" duration="16617000" />
     </task>
     <servers />
   </component>
