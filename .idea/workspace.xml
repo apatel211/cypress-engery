@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.allure:generate.executor": "Run",
+    "npm.allure:open.executor": "Run",
     "npm.coverage: test (1).executor": "Run",
     "npm.coverage: test.executor": "Run",
     "npm.coverage:report.executor": "Run",
@@ -57,6 +59,7 @@
     "npm.cypress:open.executor": "Run",
     "npm.cypress:run (1).executor": "Run",
     "npm.cypress:run.executor": "Run",
+    "npm.cypress:run:allure.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
@@ -69,32 +72,32 @@
       <recent name="$PROJECT_DIR$/cypress" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.coverage: test (1)">
+  <component name="RunManager" selected="npm.allure:open">
+    <configuration name="allure:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="allure:generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="allure:open" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="allure:open" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="coverage: test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
       <scripts>
         <script value="coverage: test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="coverage: test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/energy-cypress-tests copy/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="coverage: test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="coverage:report" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/energy-cypress-tests copy/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="coverage:report" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -110,11 +113,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="cypress:run (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="cypress:run:allure" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cypress:run" />
+        <script value="cypress:run:allure" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -122,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.allure:open" />
+        <item itemvalue="npm.cypress:run:allure" />
+        <item itemvalue="npm.allure:generate" />
         <item itemvalue="npm.coverage: test (1)" />
         <item itemvalue="npm.cy:run" />
-        <item itemvalue="npm.coverage: test" />
-        <item itemvalue="npm.coverage:report" />
-        <item itemvalue="npm.cypress:run (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +158,7 @@
       <workItem from="1755202249836" duration="297000" />
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
-      <workItem from="1755361785311" duration="17059000" />
+      <workItem from="1755361785311" duration="18061000" />
     </task>
     <servers />
   </component>

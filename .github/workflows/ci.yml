@@ -66,6 +66,8 @@ jobs:
           github_token: ${{ secrets.GH_PAGES_PAT }}
           publish_dir: ./energy-cypress-tests/allure-report
           publish_branch: gh-pages
+          force_orphan: true
+          keep_files: false
 
       - name: Show Allure Report URL
         run: |
