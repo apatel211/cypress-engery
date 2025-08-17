@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Allure plugin
         working-directory: ./energy-cypress-tests
-        run: npm install --save-dev @shelex/cypress-allure-plugin
+        run: npm install --save-dev @shelex/cypress-allure-plugin allure-commandline
 
       - name: Run Cypress with Allure
         working-directory: ./energy-cypress-tests
