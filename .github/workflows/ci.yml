@@ -42,6 +42,10 @@ jobs:
         working-directory: ./energy-cypress-tests
         run: npx cypress install
 
+      - name: Install Allure plugin
+        working-directory: ./energy-cypress-tests
+        run: npm install --save-dev @shelex/cypress-allure-plugin
+
       - name: Run Cypress with Allure
         working-directory: ./energy-cypress-tests
         run: npm run cypress:run:allure
@@ -55,7 +59,6 @@ jobs:
         with:
           name: allure-report
           path: ./energy-cypress-tests/allure-report
-
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
