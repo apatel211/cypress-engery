@@ -68,7 +68,8 @@ jobs:
           publish_branch: gh-pages
 
       - name: Show Allure Report URL
-        run:
+        run: |
           echo "Allure Report is available at: https://apatel211.github.io/cypress-engery/"
+
 
 
