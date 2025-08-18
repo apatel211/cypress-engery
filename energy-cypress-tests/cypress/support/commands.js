@@ -53,7 +53,7 @@ Cypress.Commands.add('POSTLogin', (baseURL, credentials) => {
 
 // Mock login API
 Cypress.Commands.add('mockLogin', (username, password) => {
-    cy.intercept('POST', 'http://localhost:3000/api/auth', {
+    cy.intercept('POST', '**/api/auth', {
         statusCode: 200,
         body: {
             message: 'Login successful',
