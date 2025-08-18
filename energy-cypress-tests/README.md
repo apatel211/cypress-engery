@@ -16,7 +16,8 @@ How to run:
 2. Start the app locally (expected at http://localhost:3000)
 3. Run tests: `npm run cypress:open` or `npm run cypress:run`
 
-Notes about code coverage:
+Notes about code coverage: (requires app instrumentation)
+- The Cypress tests are set up to collect code coverage data using the @cypress/code-
 - To collect coverage you'll need the app instrumented (e.g., using `babel-plugin-istanbul` or equivalent).
 - See @cypress/code-coverage docs for details. The support and cypress.config.js have the plugin hooks included.
 
@@ -26,4 +27,16 @@ Changes made:
 What to add for CI:
 - Install Cypress, run `npm run cypress:run`
 - Collect mochawesome JSONs and merge them, then produce HTML reports
-- Optionally collect coverage reports with nyc/lcov and upload to Coveralls or Codecov.
+- Github Actions or equivalent to run tests on PRs and merges
+
+Testcase which I would add:
+- Get JSON file path is missing
+- Get JSON file is not valid
+- Post internal server error 
+
+Which I have added: 
+- Login happy path
+- Login negative path
+- Enter usage happy path
+- Enter usage negative path
+- GET API happy path

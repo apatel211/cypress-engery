@@ -9,7 +9,7 @@
     "coverage:report": "nyc report --reporter=lcov",
     "coverage: test": "npm run cypress:run && npm run coverage:report",
     "cypress:run:allure": "cypress run --env allure=true --browser chrome --headless",
-    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:generate": "npm run allure:generate",
     "allure:open": "allure open allure-report"
   },
   "devDependencies": {

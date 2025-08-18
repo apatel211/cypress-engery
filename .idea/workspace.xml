@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/downloads/downloads.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/downloads/downloads.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/screenshots/enter-usage.spec.js/Enter Energy Usage -- fills the multi-step form and saves a new record (failed).png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,39 +44,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cypress.all tests in login.spec.js.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/ankitapatel/Desktop/document/assignments-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.allure:generate.executor": "Run",
-    "npm.allure:open.executor": "Run",
-    "npm.coverage: test (1).executor": "Run",
-    "npm.coverage: test.executor": "Run",
-    "npm.coverage:report.executor": "Run",
-    "npm.cy:run.executor": "Run",
-    "npm.cypress:open (1).executor": "Run",
-    "npm.cypress:open.executor": "Run",
-    "npm.cypress:run (1).executor": "Run",
-    "npm.cypress:run.executor": "Run",
-    "npm.cypress:run:allure.executor": "Run",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Users/ankitapatel/Desktop/document/assignments-main/flo-qa-assignment/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cypress.all tests in login.spec.js.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ankitapatel/Desktop/document/assignments-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.allure:generate.executor&quot;: &quot;Run&quot;,
+    &quot;npm.allure:open.executor&quot;: &quot;Run&quot;,
+    &quot;npm.coverage: test (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.coverage: test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.coverage:report.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cy:run.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cypress:open (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.cypress:open.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cypress:run (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.cypress:run.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cypress:run:allure.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ankitapatel/Desktop/document/assignments-main/flo-qa-assignment/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cypress" />
@@ -169,7 +169,8 @@
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
       <workItem from="1755361785311" duration="26302000" />
-      <workItem from="1755474477424" duration="1970000" />
+      <workItem from="1755474477424" duration="3356000" />
+      <workItem from="1755478652523" duration="1245000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,12 @@
 describe('api page', () => {
+
     beforeEach(() => {
         cy.clearCookies();
         cy.clearLocalStorage();
     });
 
     it('Create Usage Data - Success', () => {
+
         cy.login();
         cy.fixture('usage-post.json').then((data) => {
             cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataValid).then((response) => {
@@ -16,7 +18,21 @@ describe('api page', () => {
         });
     });
 
+    it('Create Usage Data - Failure', () => {
+
+        cy.login();
+        cy.fixture('usage-post.json').then((data) => {
+            cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataInvalid).then((response) => {
+                // Status code check
+                expect(response.status, 'status code').to.equal(400);
+                // Response structure check
+                expect(response.body, 'response body').to.have.property('message', 'Invalid data format');
+            });
+        });
+    });
+
     it('GET all usage records and assert', () => {
+
         cy.login();
         cy.fixture('usage-get.json').as('expectedUsage'); // load expected data
         cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
@@ -38,9 +54,9 @@ describe('api page', () => {
     });
 
     it('GET all usage records and assert invalid records do not exist', () => {
+
         cy.login();
         cy.fixture('usage-get.json').as('expectedUsage');
-
         cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
             cy.get('@expectedUsage').then((usageData) => {
                 expect(response.status).to.equal(200);
@@ -58,19 +74,9 @@ describe('api page', () => {
         });
     });
 
-    it('Create Usage Data - Failure', () => {
-        cy.login();
-        cy.fixture('usage-post.json').then((data) => {
-            cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataInvalid).then((response) => {
-                // Status code check
-                expect(response.status, 'status code').to.equal(400);
-                // Response structure check
-                expect(response.body, 'response body').to.have.property('message', 'Invalid data format');
-            });
-        });
-    });
 
     it('Login API - Success', () => {
+
         cy.fixture('test-data.json').then((data) => {
             cy.POSTLogin(Cypress.config().baseUrl, data.validCredentials)
                 .then((response) => {
@@ -84,6 +90,7 @@ describe('api page', () => {
     });
 
     it('Login API - Failure', () => {
+
         cy.fixture('test-data.json').then((data) => {
             cy.POSTLogin(Cypress.config().baseUrl, data.invalidCredentials)
                 .then((response) => {

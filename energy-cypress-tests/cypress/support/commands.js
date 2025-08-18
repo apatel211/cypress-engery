@@ -78,6 +78,13 @@ Cypress.Commands.add('mockPOSTUsageData', (responseBody = {}) => {
     }).as('postUsage');
 });
 
+Cypress.Commands.add('mockPOSTUsageInvalid', (responseBody = {}) => {
+    cy.intercept('POST', '**/api/usage', {
+        statusCode: 200,
+        body: responseBody,
+    }).as('postUsage');
+});
+
 // Mock GET Usage with valid data
 Cypress.Commands.add('mockGETUsageData', (records = []) => {
     cy.intercept('GET', '**/api/usage', {

@@ -5,6 +5,7 @@ describe('mock api page', () => {
     });
 
     it('Create Usage Data - Success', () => {
+
         cy.fixture('usage-post.json').then((data) => {
             cy.mockPOSTUsageData({message: 'Energy usage saved successfully!'});
 
@@ -15,7 +16,20 @@ describe('mock api page', () => {
         });
     });
 
+    it('Create Usage Data - Success', () => {
+
+        cy.fixture('usage-post.json').then((data) => {
+            cy.mockPOSTUsageInvalid({message: 'Invalid data format'});
+
+            cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataInvalid).then((response) => {
+                expect(response.status).to.equal(400);
+                expect(response.body.message).to.equal('Invalid data format');
+            });
+        });
+    });
+
     it('GET all usage records - valid', () => {
+
         cy.fixture('usage-get.json').then((data) => {
             cy.mockGETUsageData(data.valid.records);
 
@@ -32,6 +46,7 @@ describe('mock api page', () => {
     });
 
     it('GET all usage records - invalid records do not exist', () => {
+
         cy.fixture('usage-get.json').then((data) => {
             cy.mockGETUsageData(data.valid.records); // still returns valid data
 
@@ -46,6 +61,7 @@ describe('mock api page', () => {
 
 
     it('Login API - Success', () => {
+
         cy.fixture('test-data.json').then((data) => {
             cy.mockLogin(data.validCredentials.username, data.validCredentials.password);
 
@@ -58,6 +74,7 @@ describe('mock api page', () => {
     });
 
     it('Login API - Failure', () => {
+
         cy.fixture('test-data.json').then((data) => {
             // Mock failed login
             cy.mockLoginFailure(data.invalidCredentials.username, data.invalidCredentials.password);

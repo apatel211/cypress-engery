@@ -2,6 +2,7 @@ import {enterUsagePage} from '../support/pages/enterUsage.page'
 import {getRandomDropdownValue, getRandomNmiSuffix, getRandomUsage} from '../support/utils/dataGenerator';
 
 describe('Enter Energy Usage', () => {
+
     beforeEach(() => {
         cy.clearCookies();
         cy.clearLocalStorage();
@@ -9,7 +10,7 @@ describe('Enter Energy Usage', () => {
         enterUsagePage.visit();
     })
 
-    it('fills the multi-step form and saves a new record', () => {
+    it('Fills the multi-step form and saves a new record', () => {
 
         const randomPrefix = getRandomDropdownValue();
         enterUsagePage.nmiPrefix().select(randomPrefix).should('have.value', randomPrefix);
@@ -20,12 +21,11 @@ describe('Enter Energy Usage', () => {
         cy.url().should('include', '/dashboard')
     })
 
-    it('invalid data show error', () => {
+    it('Invalid data show error', () => {
 
         enterUsagePage.nmiPrefix().select('NEM')
         enterUsagePage.nmiSuffix().type('12345')
         enterUsagePage.submit().click()
         cy.contains('div', 'Invalid form data: invalid NMI').should('be.visible');
-
     })
 })

@@ -103,7 +103,15 @@ Instead of relying purely on fixtures, use a test API endpoint or DB seeding to 
 
 6️⃣ Alternative ways I could have done the project
 
-Other tools/frameworks:
+I could have written the test cases under codebase , would be more easy for me to maintain and run tests in the same environment as the application, but it would have made the project less modular and harder to share with others.
+Which would have been a drawback for collaboration and CI/CD integration , in addition, it would have limited the ability to use Cypress's powerful features like fixtures and intercepts effectively.
+But it would have allowed for more direct interaction with the application code, potentially leading to faster test execution and easier debugging.
+However, it would have sacrificed the modularity and separation of concerns that Cypress provides, making it harder to maintain as the application grows.
+
+Other add on :
+We can do data driven approach with dynamic request and response validation. 
+
+In terms of approaches and alternatives :Other tools/frameworks:
 Playwright: Fast, multi-browser support; slightly steeper learning curve.
 TestCafe: Simple setup, isolated execution; smaller community.
 API-first (Postman/Newman): Fast, UI-independent; no UI coverage.
