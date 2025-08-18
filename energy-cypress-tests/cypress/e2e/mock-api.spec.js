@@ -1,4 +1,5 @@
-describe('mock api page', () => {
+describe('Mock Api ', () => {
+
     beforeEach(() => {
         cy.clearCookies();
         cy.clearLocalStorage();
@@ -7,8 +8,7 @@ describe('mock api page', () => {
     it('Create Usage Data - Success', () => {
 
         cy.fixture('usage-post.json').then((data) => {
-            cy.mockPOSTUsageData({message: 'Energy usage saved successfully!'});
-
+            cy.mockPOSTUsage();
             cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataValid).then((response) => {
                 expect(response.status).to.equal(200);
                 expect(response.body.message).to.equal('Energy usage saved successfully!');
@@ -16,11 +16,10 @@ describe('mock api page', () => {
         });
     });
 
-    it('Create Usage Data - Success', () => {
+    it('Create Usage Data - Failure', () => {
 
         cy.fixture('usage-post.json').then((data) => {
-            cy.mockPOSTUsageInvalid({message: 'Invalid data format'});
-
+            cy.mockPOSTUsageInvalid();
             cy.POSTUsageData(Cypress.config().baseUrl, data.usageDataInvalid).then((response) => {
                 expect(response.status).to.equal(400);
                 expect(response.body.message).to.equal('Invalid data format');
@@ -31,31 +30,23 @@ describe('mock api page', () => {
     it('GET all usage records - valid', () => {
 
         cy.fixture('usage-get.json').then((data) => {
-            cy.mockGETUsageData(data.valid.records);
-
-            cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
-                expect(response.status).to.equal(200);
-                expect(response.body.records, 'records array').to.be.an('array').that.is.not.empty;
-
-                data.valid.records.forEach((expectedRecord) => {
-                    const match = response.body.records.find((r) => r.nmi === expectedRecord.nmi && r.timestamp === expectedRecord.timestamp && Number(r.consumption) === Number(expectedRecord.consumption) && r.unit === expectedRecord.unit);
-                    expect(match, `Record not found: ${expectedRecord.nmi}`).to.exist;
-                });
+            cy.mockUsageData(data.valid.records)
+            cy.visit('/dashboard');
+            cy.wait('@getUsage').then((interception) => {
+                expect(interception.response.statusCode).to.eq(200);
+                expect(interception.response.body.message).to.equal('Able to verify json data');
             });
         });
     });
 
-    it('GET all usage records - invalid records do not exist', () => {
 
-        cy.fixture('usage-get.json').then((data) => {
-            cy.mockGETUsageData(data.valid.records); // still returns valid data
+    it('GET all usage records - invalid', () => {
 
-            cy.GETUsageData(Cypress.config().baseUrl).then((response) => {
-                data.invalid.records.forEach((invalidRecord) => {
-                    const match = response.body.records.find((r) => r.nmi === invalidRecord.nmi && r.timestamp === invalidRecord.timestamp && Number(r.consumption) === Number(invalidRecord.consumption) && r.unit === invalidRecord.unit);
-                    expect(match, `Invalid record should not exist: ${invalidRecord.nmi}`).to.not.exist;
-                });
-            });
+        cy.mockUsageDataNotFound();
+        cy.visit('/dashboard');
+        cy.wait('@getUsageNotFound').then((interception) => {
+            expect(interception.response.statusCode).to.eq(404);
+            expect(interception.response.body.message).to.equal('The requested usage file could not be located.');
         });
     });
 
@@ -64,26 +55,26 @@ describe('mock api page', () => {
 
         cy.fixture('test-data.json').then((data) => {
             cy.mockLogin(data.validCredentials.username, data.validCredentials.password);
-
-            cy.POSTLogin(Cypress.config().baseUrl, data.validCredentials).then((response) => {
-                expect(response.status).to.equal(200);
-                expect(response.body).to.have.property('message');
-                expect(response.body).to.have.property('token');
-            });
+            cy.login();
+            cy.wait('@postLogin')
+                .then((interception) => {
+                    expect(interception.response.statusCode).to.eq(200);
+                    expect(interception.response.body.message).to.eq('Login successfully');
+                })
+            cy.url().should('include', '/home');
         });
     });
 
     it('Login API - Failure', () => {
 
         cy.fixture('test-data.json').then((data) => {
-            // Mock failed login
-            cy.mockLoginFailure(data.invalidCredentials.username, data.invalidCredentials.password);
-
-            // Call POST login with invalid credentials
-            cy.POSTLogin(Cypress.config().baseUrl, data.invalidCredentials).then((response) => {
-                expect(response.status).to.equal(401);
-                expect(response.body).to.have.property('message', 'Invalid credentials');
+            cy.mockLoginFailure(); // intercept with 401
+            cy.login();
+            cy.wait('@postLoginFail').then((interception) => {
+                expect(interception.response.statusCode).to.eq(401);
+                expect(interception.response.body.message).to.eq('Invalid credentials');
             });
+            cy.url().should('include', '/login'); // should stay on login page
         });
     });
 

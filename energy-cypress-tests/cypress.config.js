@@ -9,13 +9,11 @@ module.exports = defineConfig({
         setupNodeEvents(on, config) {
 
             allureWriter(on, config);
-            // code coverage plugin
             require('@cypress/code-coverage/task')(on, config)
             config.coverage = config.coverage || {};
             config.coverage.include = [
                 path.join(__dirname, '../flo-qa-assignment/app/api/**/*.ts')
             ];
-
             return config
         },
         env: {
@@ -32,7 +30,6 @@ module.exports = defineConfig({
             runMode: 1, // CI: retry once to avoid duplicate coverage runs
             openMode: 0 // Local: no retries, fail immediately for debugging
         },
-
         baseUrl: 'http://localhost:3000',
         specPattern: 'cypress/e2e/**/*.spec.js',
         supportFile: 'cypress/support/e2e.js',

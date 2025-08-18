@@ -56,7 +56,7 @@ Cypress.Commands.add('mockLogin', (username, password) => {
     cy.intercept('POST', '**/api/auth', {
         statusCode: 200,
         body: {
-            message: 'Login successful',
+            message: 'Login successfully',
             token: 'fake-jwt-token-12345',
         },
     }).as('postLogin');
@@ -66,39 +66,50 @@ Cypress.Commands.add('mockLogin', (username, password) => {
 Cypress.Commands.add('mockLoginFailure', () => {
     cy.intercept('POST', '**/api/auth', {
         statusCode: 401,
-        body: { message: 'Invalid credentials' },
+        body: {message: 'Invalid credentials'},
     }).as('postLoginFail');
 });
 
 // Mock POST Usage
-Cypress.Commands.add('mockPOSTUsageData', (responseBody = {}) => {
-    cy.intercept('POST', '**/api/usage', {
-        statusCode: 200,
-        body: responseBody,
-    }).as('postUsage');
+Cypress.Commands.add('mockPOSTUsage', (validData = {}) => {
+    cy.fixture('usage-post.json').then(() => {
+        cy.intercept('POST', '**/api/usage', {
+            statusCode: 200,
+            body: {
+                record: validData,
+                message: 'Energy usage saved successfully!'
+            },
+        }).as('postUsage');
+    })
 });
 
-Cypress.Commands.add('mockPOSTUsageInvalid', (responseBody = {}) => {
-    cy.intercept('POST', '**/api/usage', {
-        statusCode: 200,
-        body: responseBody,
-    }).as('postUsage');
+Cypress.Commands.add('mockPOSTUsageInvalid', (invalidData = {}) => {
+    cy.fixture('usage-post.json').then(() => {
+        cy.intercept('POST', '**/api/usage', {
+            statusCode: 400,
+            body: {
+                record: invalidData,
+                message: 'Invalid data format'
+            },
+        }).as('postUsageInvalid');
+    })
 });
 
-// Mock GET Usage with valid data
-Cypress.Commands.add('mockGETUsageData', (records = []) => {
-    cy.intercept('GET', '**/api/usage', {
-        statusCode: 200,
-        body: { records },
-    }).as('getUsage');
+// Mock GET Usage
+Cypress.Commands.add('mockUsageData', (validRecords = []) => {
+    cy.fixture('usage-get.json').then((data) => {
+        cy.intercept('GET', '/api/usage', {
+            statusCode: 200,
+            body: {records: validRecords, message: 'Able to verify json data'},
+        }).as('getUsage');
+    });
 });
 
-// Mock GET Usage with invalid records
-Cypress.Commands.add('mockGETUsageInvalid', (invalidRecords = []) => {
-    cy.intercept('GET', '**/api/usage', {
-        statusCode: 200,
-        body: { records: invalidRecords },
-    }).as('getUsageInvalid');
+Cypress.Commands.add('mockUsageDataNotFound', () => {
+    cy.intercept('GET', '/api/usage', {
+        statusCode: 404,
+        body: {
+            message: 'The requested usage file could not be located.'
+        }
+    }).as('getUsageNotFound');
 });
-
-

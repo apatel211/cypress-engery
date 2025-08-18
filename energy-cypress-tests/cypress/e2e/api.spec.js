@@ -1,4 +1,4 @@
-describe('api page', () => {
+describe('Api', () => {
 
     beforeEach(() => {
         cy.clearCookies();
