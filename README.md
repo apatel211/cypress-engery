@@ -2,26 +2,40 @@
 
 Technologies used:
 Cypress (E2E testing, API testing, stubbing/mocking)
+
 Page Object Model (POM)
+
 Mochawesome reporter
+
 Fixtures & intercepts for API mocking
+
 @cypress/code-coverage + nyc - To do
+
 
 Advantages:
 
 Cypress	Easy setup, fast local execution, supports API + UI in the same framework, auto-waiting eliminates most flakiness, built-in time travel/debugging.
+
 POM	Centralizes locators and page actions, improving maintainability when the UI changes.
+
 Mochawesome	Produces clean JSON/HTML reports for sharing with stakeholders and CI/CD integration.
+
 Fixtures + intercept	Full control over API responses → deterministic tests, faster runs without relying on backend availability.
+
 Code coverage	Direct visibility into what parts of the app are tested, encouraging better test completeness.
 
 Disadvantages:
 
 Cypress	Runs in the browser → limited support for multi-tab workflows, can be slower for very large suites compared to headless API-first testing frameworks.
+
 POM	Requires discipline; if poorly maintained, page objects can become bloated and harder to refactor.
+
 Mochawesome	Merging reports across parallel jobs needs extra tooling (mochawesome-merge).
+
 Fixtures	Over-mocking risks missing real integration bugs if not balanced with live API testing.
+
 Coverage	Requires code instrumentation, which can complicate builds if not configured early.
+
 
 2️⃣ How tests are designed and structured
 

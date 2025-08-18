@@ -10,6 +10,7 @@ Features included:
 - Reporting support with mochawesome (script `cypress:run`)
 - Code coverage plugin scaffold (@cypress/code-coverage) - requires app instrumentation
 - package.json with devDependencies and scripts
+- added request interception for API mocking 
 
 How to run:
 1. Install dependencies: `npm install`

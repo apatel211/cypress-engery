@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/downloads/downloads.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/downloads/downloads.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/screenshots/enter-usage.spec.js/Enter Energy Usage -- fills the multi-step form and saves a new record (failed).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +161,7 @@
       <workItem from="1755202581596" duration="211000" />
       <workItem from="1755361785311" duration="26302000" />
       <workItem from="1755474477424" duration="3356000" />
-      <workItem from="1755478652523" duration="1245000" />
+      <workItem from="1755478652523" duration="1862000" />
     </task>
     <servers />
   </component>
