@@ -11,7 +11,7 @@ Cypress.Commands.add("login", (fixture = 'test-data.json', type = 'validCredenti
     });
 });
 
-
+//post Usage API
 Cypress.Commands.add('POSTUsageData', (baseURL, usageData) => {
     cy.request({
         method: "POST",
@@ -24,6 +24,7 @@ Cypress.Commands.add('POSTUsageData', (baseURL, usageData) => {
     });
 });
 
+// GET Usage API
 Cypress.Commands.add('GETUsageData', (baseURL) => {
     // Make GET request to fetch usage data
     return cy.request({
@@ -36,6 +37,7 @@ Cypress.Commands.add('GETUsageData', (baseURL) => {
     });
 });
 
+// POST Login API
 Cypress.Commands.add('POSTLogin', (baseURL, credentials) => {
     cy.request({
         method: "POST",
@@ -47,4 +49,49 @@ Cypress.Commands.add('POSTLogin', (baseURL, credentials) => {
         body: credentials
     });
 })
+
+
+// Mock login API
+Cypress.Commands.add('mockLogin', (username, password) => {
+    cy.intercept('POST', 'http://localhost:3000/api/auth', {
+        statusCode: 200,
+        body: {
+            message: 'Login successful',
+            token: 'fake-jwt-token-12345',
+        },
+    }).as('postLogin');
+
+});
+
+Cypress.Commands.add('mockLoginFailure', () => {
+    cy.intercept('POST', '**/api/auth', {
+        statusCode: 401,
+        body: { message: 'Invalid credentials' },
+    }).as('postLoginFail');
+});
+
+// Mock POST Usage
+Cypress.Commands.add('mockPOSTUsageData', (responseBody = {}) => {
+    cy.intercept('POST', '**/api/usage', {
+        statusCode: 200,
+        body: responseBody,
+    }).as('postUsage');
+});
+
+// Mock GET Usage with valid data
+Cypress.Commands.add('mockGETUsageData', (records = []) => {
+    cy.intercept('GET', '**/api/usage', {
+        statusCode: 200,
+        body: { records },
+    }).as('getUsage');
+});
+
+// Mock GET Usage with invalid records
+Cypress.Commands.add('mockGETUsageInvalid', (invalidRecords = []) => {
+    cy.intercept('GET', '**/api/usage', {
+        statusCode: 200,
+        body: { records: invalidRecords },
+    }).as('getUsageInvalid');
+});
+
 

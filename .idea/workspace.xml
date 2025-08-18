@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/node_modules/@cypress/webpack-preprocessor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +50,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/ankitapatel/Desktop/document/assignments-main",
@@ -72,7 +82,7 @@
       <recent name="$PROJECT_DIR$/cypress" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.allure:open">
+  <component name="RunManager" selected="npm.cypress:run:allure">
     <configuration name="allure:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
@@ -103,11 +113,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="cy:run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="cypress:open" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cy:run" />
+        <script value="cypress:open" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -125,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.allure:open" />
         <item itemvalue="npm.cypress:run:allure" />
-        <item itemvalue="npm.allure:generate" />
+        <item itemvalue="npm.cypress:open" />
         <item itemvalue="npm.coverage: test (1)" />
-        <item itemvalue="npm.cy:run" />
+        <item itemvalue="npm.allure:open" />
+        <item itemvalue="npm.allure:generate" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +168,8 @@
       <workItem from="1755202249836" duration="297000" />
       <workItem from="1755202555835" duration="23000" />
       <workItem from="1755202581596" duration="211000" />
-      <workItem from="1755361785311" duration="18061000" />
+      <workItem from="1755361785311" duration="26302000" />
+      <workItem from="1755474477424" duration="1970000" />
     </task>
     <servers />
   </component>

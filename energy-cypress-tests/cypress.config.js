@@ -1,11 +1,13 @@
 const {defineConfig} = require('cypress')
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+const fs = require('fs');
 const path = require('path');
 
 module.exports = defineConfig({
     projectId: 'jps822',
     e2e: {
         setupNodeEvents(on, config) {
+
             allureWriter(on, config);
             // code coverage plugin
             require('@cypress/code-coverage/task')(on, config)
@@ -13,6 +15,7 @@ module.exports = defineConfig({
             config.coverage.include = [
                 path.join(__dirname, '../flo-qa-assignment/app/api/**/*.ts')
             ];
+
             return config
         },
         env: {

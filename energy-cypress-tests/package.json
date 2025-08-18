@@ -33,5 +33,9 @@
       "html"
     ],
     "all": true
+  },
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^7.0.0",
+    "@shelex/cypress-allure-plugin": "^2.41.2"
   }
 }
