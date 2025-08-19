@@ -1,6 +1,5 @@
 const {defineConfig} = require('cypress')
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
-const fs = require('fs');
 const path = require('path');
 
 module.exports = defineConfig({

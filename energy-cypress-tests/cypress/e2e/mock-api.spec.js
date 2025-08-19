@@ -67,7 +67,6 @@ describe('Mock Api ', () => {
 
     it('Login API - Failure', () => {
 
-        cy.fixture('test-data.json').then((data) => {
             cy.mockLoginFailure(); // intercept with 401
             cy.login();
             cy.wait('@postLoginFail').then((interception) => {
@@ -75,7 +74,6 @@ describe('Mock Api ', () => {
                 expect(interception.response.body.message).to.eq('Invalid credentials');
             });
             cy.url().should('include', '/login'); // should stay on login page
-        });
     });
 
 });

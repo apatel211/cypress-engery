@@ -1,4 +1,4 @@
-Cypress.Commands.add("login", (fixture = 'test-data.json', type = 'validCredentials') => {
+Cypress.Commands.add("login", (fixture = 'test-data.json') => {
     cy.fixture(fixture).then((data) => {
 
         cy.visit('/login');
@@ -52,12 +52,11 @@ Cypress.Commands.add('POSTLogin', (baseURL, credentials) => {
 
 
 // Mock login API
-Cypress.Commands.add('mockLogin', (username, password) => {
+Cypress.Commands.add('mockLogin', () => {
     cy.intercept('POST', '**/api/auth', {
         statusCode: 200,
         body: {
-            message: 'Login successfully',
-            token: 'fake-jwt-token-12345',
+            message: 'Login successfully'
         },
     }).as('postLogin');
 
@@ -97,12 +96,10 @@ Cypress.Commands.add('mockPOSTUsageInvalid', (invalidData = {}) => {
 
 // Mock GET Usage
 Cypress.Commands.add('mockUsageData', (validRecords = []) => {
-    cy.fixture('usage-get.json').then((data) => {
         cy.intercept('GET', '/api/usage', {
             statusCode: 200,
             body: {records: validRecords, message: 'Able to verify json data'},
         }).as('getUsage');
-    });
 });
 
 Cypress.Commands.add('mockUsageDataNotFound', () => {
