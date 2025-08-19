@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="">
+    <list default="true" id="014a90ba-cecd-4752-b35e-ed8c73a6b2ed" name="Changes" comment="add test result">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/downloads/downloads.html" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/downloads/downloads.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/e2e/mock-api.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/reports/merged.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/reports/merged.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/energy-cypress-tests/cypress/support/commands.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +66,8 @@
     "npm.cypress:run (1).executor": "Run",
     "npm.cypress:run.executor": "Run",
     "npm.cypress:run:allure.executor": "Run",
+    "npm.merge:reports.executor": "Run",
+    "npm.mochawesome:report.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
@@ -75,7 +80,7 @@
       <recent name="$PROJECT_DIR$/cypress" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cypress:run:allure">
+  <component name="RunManager" selected="npm.allure:generate">
     <configuration name="allure:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
@@ -86,17 +91,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="allure:open" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="allure:open" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="coverage: test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="coverage: test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
       <scripts>
@@ -106,11 +101,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="cypress:open" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="cypress:run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cypress:open" />
+        <script value="cypress:run" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -126,13 +121,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="merge:reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/energy-cypress-tests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="merge:reports" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.cypress:run:allure" />
-        <item itemvalue="npm.cypress:open" />
-        <item itemvalue="npm.coverage: test (1)" />
-        <item itemvalue="npm.allure:open" />
         <item itemvalue="npm.allure:generate" />
+        <item itemvalue="npm.cypress:run:allure" />
+        <item itemvalue="npm.merge:reports" />
+        <item itemvalue="npm.coverage: test" />
+        <item itemvalue="npm.cypress:run" />
       </list>
     </recent_temporary>
   </component>
@@ -163,11 +168,32 @@
       <workItem from="1755202581596" duration="211000" />
       <workItem from="1755361785311" duration="26302000" />
       <workItem from="1755474477424" duration="3356000" />
-      <workItem from="1755478652523" duration="3512000" />
+      <workItem from="1755478652523" duration="20998000" />
     </task>
+    <task id="LOCAL-00001" summary="add test result">
+      <option name="closed" value="true" />
+      <created>1755561101912</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755561101912</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add test result">
+      <option name="closed" value="true" />
+      <created>1755561138801</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755561138801</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add test result" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test result" />
   </component>
 </project>

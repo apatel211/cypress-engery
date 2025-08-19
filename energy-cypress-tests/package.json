@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=true",
-    "merge:reports": "mochawesome-merge cypress/reports/*.json | marge --reportDir cypress/reports/final --inline",
+    "cypress:run": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=false,json=true",
+    "merge:reports": "mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json && marge cypress/reports/merged.json --reportDir cypress/reports --inline --charts",
     "coverage:report": "nyc report --reporter=lcov",
     "coverage: test": "npm run cypress:run && npm run coverage:report",
     "cypress:run:allure": "cypress run --env allure=true --browser chrome --headless",
-    "allure:generate": "npm run allure:generate",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report"
   },
   "devDependencies": {

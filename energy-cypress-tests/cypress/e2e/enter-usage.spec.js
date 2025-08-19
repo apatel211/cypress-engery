@@ -8,7 +8,7 @@ describe('Enter Energy Usage', () => {
         cy.clearLocalStorage();
         cy.login();
         enterUsagePage.visit();
-    })
+    });
 
     it('Fills the multi-step form and saves a new record', () => {
 
@@ -19,7 +19,7 @@ describe('Enter Energy Usage', () => {
         enterUsagePage.usageInput().type(getRandomUsage())
         enterUsagePage.save().filter(':visible').should('be.enabled').click();
         cy.url().should('include', '/dashboard')
-    })
+    });
 
     it('Invalid data show error', () => {
 
@@ -27,5 +27,6 @@ describe('Enter Energy Usage', () => {
         enterUsagePage.nmiSuffix().type('12345')
         enterUsagePage.submit().click()
         cy.contains('div', 'Invalid form data: invalid NMI').should('be.visible');
-    })
-})
+    });
+
+});
